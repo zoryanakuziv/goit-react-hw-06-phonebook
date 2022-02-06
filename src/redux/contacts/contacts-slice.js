@@ -19,7 +19,7 @@ const contactsSlice = createSlice({
     },
   },
 });
-console.log(contactsSlice);
+
 export const { addContact, deleteContact } = contactsSlice.actions;
 export const contactsSelector = (state) => state.contacts.value;
 export const contactsReducer = contactsSlice.reducer;

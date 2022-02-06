@@ -9,15 +9,7 @@ const filterSlice = createSlice({
     },
   },
 });
-console.log(filterSlice);
+
 export const { filterContacts } = filterSlice.actions;
 export const filterSelector = (state) => state.filter;
 export const filterReducer = filterSlice.reducer;
-
-/* import { createReducer } from "@reduxjs/toolkit";
-import { changeFilter } from "./filter-actions";
-const filter = createReducer("", {
-  [changeFilter]: (_, { payload }) => payload,
-});
-export filter.reducer;
- */

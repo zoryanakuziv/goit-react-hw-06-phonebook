@@ -1,8 +1,7 @@
 import React from "react";
 import { FilterInput } from "./Filter.styled";
 import { useDispatch, useSelector } from "react-redux";
-//import { changeFilter } from "../../redux/filter/filter-actions";
-//import { getFilter } from "../../redux/filter/filter-selectors";
+
 import {
   filterSelector,
   filterContacts,
