@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
 import Container from "../container/Container";
 import Form from "../form/Form";
 import Filter from "../filter/Filter";
 import ContactList from "../contacts/Contacts";
 
 export default function App() {
-  const [contacts, setContacts] = useState(() => {
+  /*  const [contacts, setContacts] = useState(() => {
     return JSON.parse(localStorage.getItem("contacts")) ?? []; //lazy state ititialization;
-  });
-  const [filter, setFilter] = useState("");
+  }); */
+  //const [filter, setFilter] = useState("");
 
-  useEffect(() => {
+  /*  useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
 
@@ -38,12 +38,13 @@ export default function App() {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
+ */
 
   return (
     <Container>
-      <Form onSubmit={formSubmitHandler} />
-      <Filter filter={filter} onChange={filterHandler} />
-      <ContactList contacts={filteredContacts()} onDelete={deleteContact} />
+      <Form />
+      <Filter />
+      <ContactList />
     </Container>
   );
 }
