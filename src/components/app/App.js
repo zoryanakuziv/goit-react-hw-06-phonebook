@@ -1,4 +1,3 @@
-//import React, { useState, useEffect } from "react";
 import Container from "../container/Container";
 import Form from "../form/Form";
 import Filter from "../filter/Filter";
