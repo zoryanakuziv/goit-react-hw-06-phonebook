@@ -11,8 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 //import { PersistGate } from "redux-persist/integration/react";
-import { contactsReducer } from "./contacts/contacts-slice";
-import { filterReducer } from "./filter/filter-slice";
+import { contacts } from "./contacts/contacts-slice";
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -29,9 +28,7 @@ const contactsPersistConfig = {
 
 export const store = configureStore({
   reducer: {
-    contacts: persistReducer(contactsPersistConfig, contactsReducer),
-    filter: filterReducer,
-    //contacts: contactsReducer,
+    contacts: persistReducer(contactsPersistConfig, contacts),
   },
   devTools: process.env.NODE_ENV === "development",
   middleware: middleware,
